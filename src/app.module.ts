@@ -6,10 +6,13 @@ import { PrismaModule } from './prisma/prisma.module';
 import { ProductModule } from './product/product.module';
 
 @Module({
-  imports: [PrismaModule, ConfigModule.forRoot({
-    isGlobal: true,
-  }
-  ), ProductModule,],
+  imports: [
+    PrismaModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    ProductModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
