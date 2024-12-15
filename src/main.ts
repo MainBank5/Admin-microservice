@@ -20,7 +20,7 @@ async function bootstrap() {
   //swagger configuration
   const config = await new DocumentBuilder()
     .setTitle('Product-Admin')
-    .setDescription('Product Admin API')
+    .setDescription('Product Admin API microservice')
     .setVersion('v1')
     .addTag('Product Admin')
     .build();
