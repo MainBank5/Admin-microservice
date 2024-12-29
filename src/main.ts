@@ -21,7 +21,6 @@ async function bootstrap() {
   const config = await new DocumentBuilder()
     .setTitle('Product-Admin')
     .setDescription('Product Admin API microservice')
-    .setVersion('v1')
     .addTag('Product Admin')
     .build();
   const document = SwaggerModule.createDocument(app, config);
@@ -29,3 +28,4 @@ async function bootstrap() {
   await app.listen(process.env.PORT ?? 8000);
 }
 bootstrap();
+//the producer/publisher
