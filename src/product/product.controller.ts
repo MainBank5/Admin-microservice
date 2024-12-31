@@ -4,14 +4,11 @@ import { Get, Post, Body, Param, Query } from '@nestjs/common';
 import { ApiOperation, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CreateProductDto } from './dto/create-product.dto';
 import { Product } from './entity/product-entity';
-import { ClientProxy } from '@nestjs/microservices';
+
 
 @Controller('products')
 export class ProductController {
-  constructor(
-    private readonly _productService: ProductService,
-    @Inject('PRODUCT_SERVICE') private readonly client: ClientProxy
-  ) {}
+  constructor( private readonly _productService: ProductService ) {}
   @Get()
   @ApiOperation({ summary: 'Get all products' })
   @HttpCode(200)
