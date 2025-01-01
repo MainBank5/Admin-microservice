@@ -14,7 +14,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
           urls: ['amqps://zujxsqjl:xQ-rHr8_DJIA4BVRKWrNwH1Q4HXbjQb1@cow.rmq2.cloudamqp.com/zujxsqjl'],
           queue: 'main_queue',
           queueOptions: {
-            durable: false
+            durable: true,
           },
         },
       },
@@ -25,3 +25,5 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
   controllers: [ProductController],
 })
 export class ProductModule {}
+
+//the producer/publisher
