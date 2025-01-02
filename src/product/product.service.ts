@@ -12,7 +12,7 @@ export class ProductService {
   ) {}
 
   async getAllProducts(): Promise<Product[]> {
-    this.client.emit('product.get.all', {});
+    this.client.emit('product.get.all', 'Hello from rabbitMQ');
     return this._prisma.product.findMany();
   }
   async getProductById(id: string): Promise<Product> {
